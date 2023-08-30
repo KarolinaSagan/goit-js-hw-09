@@ -6,6 +6,7 @@ form.addEventListener('submit', onSubmitForm);
 
 function onSubmitForm(event) {
   event.preventDefault();
+
   const { delay, step, amount } = event.currentTarget.elements;
 
   if (delay.value < 0 || step.value < 0 || amount.value < 0) {
@@ -28,8 +29,6 @@ function onSubmitForm(event) {
         });
     }
   }
-
-  event.currentTarget.reset();
 }
 
 function createPromise(position, delay) {
